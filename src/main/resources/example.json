@@ -1,0 +1,195 @@
+{
+  "organizationProgressReports": {
+    "2020-07-28": {
+      "readiness": 31.13,
+      "health": 27.97,
+      "completedActivities": 33,
+      "complectedDeliverableCount": 19,
+      "variance": 31.78
+    },
+    "2020-08-11": {
+      "readiness": 10.03,
+      "health": 25.0,
+      "completedActivities": 29,
+      "complectedDeliverableCount": 32,
+      "variance": 39.39
+    },
+    "2020-07-21": {
+      "readiness": 27.19,
+      "health": 37.92,
+      "completedActivities": 25,
+      "complectedDeliverableCount": 23,
+      "variance": 6.88
+    },
+    "2020-08-04": {
+      "readiness": 12.39,
+      "health": 10.38,
+      "completedActivities": 10,
+      "complectedDeliverableCount": 2,
+      "variance": 6.11
+    }
+  },
+  "organizationAnalysis": {
+    "categoryStatus": {
+      "notHealthyCategories": 2,
+      "mediumHealthyCategories": 10,
+      "healthyCategories": 5
+    },
+    "deliverableStatus": {
+      "notHealthyDeliverable": 6,
+      "mediumHealthyDeliverables": 3,
+      "healthyDeliverables": 5
+    }
+  },
+  "totalOrganizationProgress": {
+    "actualProgressPoints": {
+      "2019-09-18": 9.0,
+      "2019-06-18": 0.0,
+      "2019-07-18": 3.0,
+      "2019-08-18": 6.0,
+      "2019-10-18": 12.0,
+      "2019-11-18": 15.0,
+      "2019-12-18": 18.0,
+      "2020-01-18": 21.0,
+      "2020-02-18": 24.0,
+      "2020-03-18": 27.0,
+      "2020-04-18": 30.0,
+      "2020-05-18": 33.0,
+      "2020-06-18": 36.0,
+      "2020-07-18": 39.0,
+      "2020-08-18": 42.0
+    },
+    "planedProgressPoints": {
+      "2020-01-18": 35.0,
+      "2019-09-18": 15.0,
+      "2019-06-18": 0.0,
+      "2019-07-18": 5.0,
+      "2019-08-18": 10.0,
+      "2019-10-18": 20.0,
+      "2019-11-18": 25.0,
+      "2019-12-18": 30.0,
+      "2020-02-18": 40.0,
+      "2020-03-18": 45.0,
+      "2020-04-18": 50.0,
+      "2020-05-18": 55.0,
+      "2020-06-18": 60.0,
+      "2020-07-18": 65.0,
+      "2020-08-18": 70.0,
+      "2020-09-18": 75.0,
+      "2020-10-18": 80.0,
+      "2020-11-18": 85.0,
+      "2020-12-18": 90.0,
+      "2021-01-18": 95.0,
+      "2021-02-18": 100.0
+    }
+  },
+  "categoryStates": [
+    {
+      "categoryTitle": "Laboratory",
+      "categoryHealth": 3.2,
+      "actualProgress": 30.0,
+      "planedProgress": 100.0,
+      "variance": 70.0,
+      "deliverableStates": [
+        {
+          "deliverableTitle": "Laboratory0",
+          "deliverableHealth": 30.64,
+          "actualDeliverableProgress": 36.8,
+          "planedDeliverableProgress": 15.52,
+          "variance": 29.47
+        },
+        {
+          "deliverableTitle": "Laboratory1",
+          "deliverableHealth": 11.86,
+          "actualDeliverableProgress": 34.56,
+          "planedDeliverableProgress": 28.0,
+          "variance": 20.95
+        },
+        {
+          "deliverableTitle": "Laboratory2",
+          "deliverableHealth": 28.07,
+          "actualDeliverableProgress": 36.63,
+          "planedDeliverableProgress": 19.11,
+          "variance": 10.2
+        },
+        {
+          "deliverableTitle": "Laboratory3",
+          "deliverableHealth": 18.57,
+          "actualDeliverableProgress": 29.46,
+          "planedDeliverableProgress": 6.61,
+          "variance": 35.52
+        },
+        {
+          "deliverableTitle": "Laboratory4",
+          "deliverableHealth": 31.11,
+          "actualDeliverableProgress": 10.4,
+          "planedDeliverableProgress": 32.25,
+          "variance": 15.57
+        },
+        {
+          "deliverableTitle": "Laboratory5",
+          "deliverableHealth": 34.24,
+          "actualDeliverableProgress": 35.86,
+          "planedDeliverableProgress": 39.25,
+          "variance": 30.11
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Learning",
+      "categoryHealth": 5.2,
+      "actualProgress": 40.0,
+      "planedProgress": 100.0,
+      "variance": 60.0,
+      "deliverableStates": [
+        {
+          "deliverableTitle": "Learning0",
+          "deliverableHealth": 6.36,
+          "actualDeliverableProgress": 6.42,
+          "planedDeliverableProgress": 23.62,
+          "variance": 7.7
+        },
+        {
+          "deliverableTitle": "Learning1",
+          "deliverableHealth": 6.7,
+          "actualDeliverableProgress": 36.89,
+          "planedDeliverableProgress": 29.23,
+          "variance": 9.92
+        },
+        {
+          "deliverableTitle": "Learning2",
+          "deliverableHealth": 27.53,
+          "actualDeliverableProgress": 18.78,
+          "planedDeliverableProgress": 22.17,
+          "variance": 14.22
+        },
+        {
+          "deliverableTitle": "Learning3",
+          "deliverableHealth": 11.42,
+          "actualDeliverableProgress": 10.48,
+          "planedDeliverableProgress": 35.83,
+          "variance": 5.33
+        },
+        {
+          "deliverableTitle": "Learning4",
+          "deliverableHealth": 9.99,
+          "actualDeliverableProgress": 25.46,
+          "planedDeliverableProgress": 11.46,
+          "variance": 30.61
+        },
+        {
+          "deliverableTitle": "Learning5",
+          "deliverableHealth": 12.24,
+          "actualDeliverableProgress": 30.69,
+          "planedDeliverableProgress": 39.19,
+          "variance": 27.44
+        }
+      ]
+    }
+  ],
+  "activitiesState": {
+    "progressiveActivitiesCount": 50,
+    "completedActivitiesCount": 10,
+    "inactiveActivitiesCount": 30
+  }
+}
