@@ -1,6 +1,8 @@
 package com.mock.rdslambdamock.mock;
 
+import com.mock.rdslambdamock.model.activity.ActivitiesProgressAnalise;
 import com.mock.rdslambdamock.model.activity.ActivitiesState;
+import com.mock.rdslambdamock.model.activity.Progress;
 import com.mock.rdslambdamock.model.analysis.CategoryStatus;
 import com.mock.rdslambdamock.model.analysis.DeliverableStatus;
 import com.mock.rdslambdamock.model.analysis.OrganizationAnalysis;
@@ -11,10 +13,10 @@ import com.mock.rdslambdamock.model.progress.WeeklyOrganizationActualProgress;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.TreeMap;
 
 public class MockGenerator {
 
@@ -24,9 +26,10 @@ public class MockGenerator {
 
   public static ActivitiesState getActivityState() {
     return ActivitiesState.builder()
-        .completedActivitiesCount(10)
-        .inactiveActivitiesCount(30)
-        .progressiveActivitiesCount(50).build();
+        .completedInTimeActivitiesCount(getRandomInt())
+        .completedOverDueActivitiesCount(getRandomInt())
+        .inactiveActivitiesCount(getRandomInt())
+        .progressiveActivitiesCount(getRandomInt()).build();
   }
 
   public static List<CategoryState> getCategoriesStates() {
@@ -53,14 +56,14 @@ public class MockGenerator {
 
   public static OrganizationAnalysis getOrganizationAnalysis() {
     CategoryStatus categoryStatus = CategoryStatus.builder()
-        .healthyCategories(5)
-        .mediumHealthyCategories(10)
-        .notHealthyCategories(2).build();
+        .healthyCategories(getRandomInt())
+        .mediumHealthyCategories(getRandomInt())
+        .notHealthyCategories(getRandomInt()).build();
 
     DeliverableStatus deliverableStatus = DeliverableStatus.builder()
-        .healthyDeliverables(5)
-        .mediumHealthyDeliverables(3)
-        .notHealthyDeliverable(6).build();
+        .healthyDeliverables(getRandomInt())
+        .mediumHealthyDeliverables(getRandomInt())
+        .notHealthyDeliverable(getRandomInt()).build();
 
     return OrganizationAnalysis.builder()
         .categoryStatus(categoryStatus)
@@ -68,8 +71,8 @@ public class MockGenerator {
   }
 
   public static Map<LocalDate, WeeklyOrganizationActualProgress> getProgressReports() {
-    Map<LocalDate, WeeklyOrganizationActualProgress> reports = new HashMap<>();
-    for (int i = 4; i > 0; i--) {
+    Map<LocalDate, WeeklyOrganizationActualProgress> reports = new TreeMap<>();
+    for (int i = 3; i >= 0; i--) {
       WeeklyOrganizationActualProgress progress = WeeklyOrganizationActualProgress.builder()
           .complectedDeliverableCount(getRandomInt())
           .completedActivities(getRandomInt())
@@ -83,8 +86,8 @@ public class MockGenerator {
   }
 
   public static TotalOrganizationProgress getTotalOrganizationProgress() {
-    Map<LocalDate, Double> planedProgress = new HashMap<>();
-    Map<LocalDate, Double> actualProgress = new HashMap<>();
+    Map<LocalDate, Double> planedProgress = new TreeMap<>();
+    Map<LocalDate, Double> actualProgress = new TreeMap<>();
 
     double actualProgressPoints = 0.0;
     double planedProgressPoints = 0.0;
@@ -95,13 +98,23 @@ public class MockGenerator {
       planedProgressPoints += 5;
       if (i >= 0) {
         actualProgress.put(CURRENT_DATE.minusMonths(i), actualProgressPoints);
-        actualProgressPoints += 3;
+        actualProgressPoints += 1;
       }
     }
 
     return TotalOrganizationProgress.builder()
         .planedProgressPoints(planedProgress)
         .actualProgressPoints(actualProgress).build();
+  }
+
+  public static ActivitiesProgressAnalise getProgressAnalise() {
+
+    return ActivitiesProgressAnalise.builder()
+        .actualProgress(Progress.builder().negativeActivitiesCount(getRandomInt())
+            .positiveActivitiesCount(getRandomInt()).build())
+        .perceptedProgress(Progress.builder().negativeActivitiesCount(getRandomInt())
+            .positiveActivitiesCount(getRandomInt()).build())
+        .build();
   }
 
   private static List<DeliverableState> getDeliverableStates(String title) {

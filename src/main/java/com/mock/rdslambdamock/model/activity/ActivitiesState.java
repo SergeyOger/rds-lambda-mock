@@ -13,7 +13,9 @@ public class ActivitiesState {
 
   private int progressiveActivitiesCount;
 
-  private int completedActivitiesCount;
+  private int completedInTimeActivitiesCount;
+
+  private int completedOverDueActivitiesCount;
 
   private int inactiveActivitiesCount;
 

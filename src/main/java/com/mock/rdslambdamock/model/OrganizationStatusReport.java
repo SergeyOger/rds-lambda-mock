@@ -2,6 +2,7 @@ package com.mock.rdslambdamock.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.mock.rdslambdamock.model.activity.ActivitiesState;
+import com.mock.rdslambdamock.model.activity.ActivitiesProgressAnalise;
 import com.mock.rdslambdamock.model.analysis.OrganizationAnalysis;
 import com.mock.rdslambdamock.model.category.CategoryState;
 import com.mock.rdslambdamock.model.progress.TotalOrganizationProgress;
@@ -26,5 +27,7 @@ public class OrganizationStatusReport {
   private List<CategoryState> categoryStates;
 
   private ActivitiesState activitiesState;
+
+  private ActivitiesProgressAnalise activitiesProgressAnalise;
 
 }
