@@ -95,10 +95,10 @@ public class MockGenerator {
     for (int i = 14; i >= -6; i--) {
 
       planedProgress.put(CURRENT_DATE.minusMonths(i), planedProgressPoints);
-      planedProgressPoints += 5;
+      planedProgressPoints += getRandomInt(1, 5);
       if (i >= 0) {
         actualProgress.put(CURRENT_DATE.minusMonths(i), actualProgressPoints);
-        actualProgressPoints += 1;
+        actualProgressPoints += getRandomInt(1, 6);
       }
     }
 
@@ -137,6 +137,10 @@ public class MockGenerator {
   private static int getRandomInt() {
     int min = 2;
     int max = 40;
+    return RANDOM.nextInt((max - min) + 1) + min;
+  }
+
+  private static int getRandomInt(int min, int max) {
     return RANDOM.nextInt((max - min) + 1) + min;
   }
 
