@@ -21,7 +21,7 @@ public class DashboardController {
 
     OrganizationStatusReport report = OrganizationStatusReport.builder()
         .activitiesState(MockGenerator.getActivityState())
-        .categoryStates(MockGenerator.getCategoriesStates())
+        .categoryStateProgress(MockGenerator.getCategoryStateProgress())
         .organizationAnalysis(MockGenerator.getOrganizationAnalysis())
         .organizationProgressReports(MockGenerator.getProgressReports())
         .totalOrganizationProgress(MockGenerator.getTotalOrganizationProgress())

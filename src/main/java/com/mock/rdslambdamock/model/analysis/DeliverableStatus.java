@@ -17,4 +17,6 @@ public class DeliverableStatus {
 
   private int healthyDeliverables;
 
+  private int notStartedDeliverables;
+
 }

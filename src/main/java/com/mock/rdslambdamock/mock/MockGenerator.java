@@ -7,7 +7,9 @@ import com.mock.rdslambdamock.model.analysis.CategoryStatus;
 import com.mock.rdslambdamock.model.analysis.DeliverableStatus;
 import com.mock.rdslambdamock.model.analysis.OrganizationAnalysis;
 import com.mock.rdslambdamock.model.category.CategoryState;
+import com.mock.rdslambdamock.model.category.CategoryStateProgress;
 import com.mock.rdslambdamock.model.category.DeliverableState;
+import com.mock.rdslambdamock.model.category.OrganizationTotalProgress;
 import com.mock.rdslambdamock.model.progress.TotalOrganizationProgress;
 import com.mock.rdslambdamock.model.progress.WeeklyOrganizationActualProgress;
 import java.time.LocalDate;
@@ -32,7 +34,22 @@ public class MockGenerator {
         .progressiveActivitiesCount(getRandomInt()).build();
   }
 
-  public static List<CategoryState> getCategoriesStates() {
+  public static CategoryStateProgress getCategoryStateProgress() {
+    return CategoryStateProgress.builder()
+        .categoryStates(getCategoriesStates())
+        .organizationTotalProgress(getOrganizationTotalProgress()).build();
+  }
+
+  private static OrganizationTotalProgress getOrganizationTotalProgress() {
+    return OrganizationTotalProgress.builder()
+        .totalActualProgress(getRandomDouble())
+        .totalCategoryHealth(getRandomDouble())
+        .totalPlanedProgress(getRandomDouble())
+        .totalVariance(getRandomDouble())
+        .build();
+  }
+
+  private static List<CategoryState> getCategoriesStates() {
 
     CategoryState categoryStateForLaboratory = CategoryState.builder()
         .actualProgress(30)
@@ -63,7 +80,8 @@ public class MockGenerator {
     DeliverableStatus deliverableStatus = DeliverableStatus.builder()
         .healthyDeliverables(getRandomInt())
         .mediumHealthyDeliverables(getRandomInt())
-        .notHealthyDeliverable(getRandomInt()).build();
+        .notHealthyDeliverable(getRandomInt())
+        .notStartedDeliverables(getRandomInt()).build();
 
     return OrganizationAnalysis.builder()
         .categoryStatus(categoryStatus)
@@ -78,7 +96,7 @@ public class MockGenerator {
           .completedActivities(getRandomInt())
           .health(getRandomDouble())
           .readiness(getRandomDouble())
-          .variance(getRandomDouble())
+          .runOut(getRandomInt())
           .build();
       reports.put(CURRENT_DATE.minusWeeks(i), progress);
     }

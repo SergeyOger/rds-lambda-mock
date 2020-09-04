@@ -5,6 +5,8 @@ import com.mock.rdslambdamock.model.activity.ActivitiesState;
 import com.mock.rdslambdamock.model.activity.ActivitiesProgressAnalise;
 import com.mock.rdslambdamock.model.analysis.OrganizationAnalysis;
 import com.mock.rdslambdamock.model.category.CategoryState;
+import com.mock.rdslambdamock.model.category.CategoryStateProgress;
+import com.mock.rdslambdamock.model.category.OrganizationTotalProgress;
 import com.mock.rdslambdamock.model.progress.TotalOrganizationProgress;
 import com.mock.rdslambdamock.model.progress.WeeklyOrganizationActualProgress;
 import java.time.LocalDate;
@@ -24,7 +26,7 @@ public class OrganizationStatusReport {
 
   private TotalOrganizationProgress totalOrganizationProgress;
 
-  private List<CategoryState> categoryStates;
+  private CategoryStateProgress categoryStateProgress;
 
   private ActivitiesState activitiesState;
 

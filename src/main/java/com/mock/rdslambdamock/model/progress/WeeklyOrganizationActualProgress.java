@@ -19,6 +19,6 @@ public class WeeklyOrganizationActualProgress {
 
   private int complectedDeliverableCount;
 
-  private double variance;
+  private int runOut;
 
 }
