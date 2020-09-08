@@ -18,5 +18,4 @@ public class OrganizationTotalProgress {
   private double totalPlanedProgress;
 
   private double totalVariance;
-
 }

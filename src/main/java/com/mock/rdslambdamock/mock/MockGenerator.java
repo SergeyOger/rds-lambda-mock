@@ -68,7 +68,36 @@ public class MockGenerator {
         .variance(60)
         .deliverableStates(getDeliverableStates("Learning"))
         .build();
-    return Arrays.asList(categoryStateForLaboratory, categoryStateForLearning);
+
+    CategoryState categoryStateForLearning1 = CategoryState.builder()
+        .actualProgress(40)
+        .categoryHealth(5.2)
+        .categoryTitle("Learning")
+        .planedProgress(100.00)
+        .variance(60)
+        .deliverableStates(getDeliverableStates("Learning"))
+        .build();
+
+    CategoryState categoryStateForLearning2 = CategoryState.builder()
+        .actualProgress(40)
+        .categoryHealth(5.2)
+        .categoryTitle("Learning")
+        .planedProgress(100.00)
+        .variance(60)
+        .deliverableStates(getDeliverableStates("Learning"))
+        .build();
+
+    CategoryState categoryStateForLearning3 = CategoryState.builder()
+        .actualProgress(40)
+        .categoryHealth(5.2)
+        .categoryTitle("Learning")
+        .planedProgress(100.00)
+        .variance(60)
+        .deliverableStates(getDeliverableStates("Learning"))
+        .build();
+    return Arrays
+        .asList(categoryStateForLaboratory, categoryStateForLearning, categoryStateForLearning1,
+            categoryStateForLearning2, categoryStateForLearning3);
   }
 
   public static OrganizationAnalysis getOrganizationAnalysis() {
